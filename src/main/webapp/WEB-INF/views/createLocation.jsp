@@ -81,7 +81,7 @@
 		
 			<br><br>
 			
-			<a href="displayLocations">View All </a>
+				<a href="displayLocations">View All </a>
 			
 			<br><br>
 			

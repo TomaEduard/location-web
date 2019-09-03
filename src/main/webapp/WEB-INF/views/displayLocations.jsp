@@ -56,14 +56,20 @@
 			</c:forEach>
 						
 		</table>
+		
+			<br>
+			
+			<!-- put new button: Add Customer -->
+			<input type="button" value="View Report"
+				   onclick="window.location.href='generateReport'; return false;"
+				   class="report-button"
+			/>
 			
 			<!-- put new button: Add Customer -->
 			<input type="button" value="Add Location"
 				   onclick="window.location.href='showCreate'; return false;"
 				   class="add-button"
 			/>
-			
-			<a href="/showCreate">Add Location</a>
 	
 	
 	</body>

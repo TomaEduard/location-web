@@ -12,25 +12,22 @@ import org.springframework.stereotype.Component;
 public class EmailUtilImpl implements EmailUtil {
 
 	@Autowired
-	JavaMailSender javaMailSender;
-	
+	private JavaMailSender sender;
+
 	@Override
 	public void sendEmail(String toAddress, String subject, String body) {
-		 
-		MimeMessage message = javaMailSender.createMimeMessage();
+
+		MimeMessage message = sender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message);
-		
 		try {
 			helper.setTo(toAddress);
 			helper.setSubject(subject);
 			helper.setText(body);
 		} catch (MessagingException e) {
-			
 			e.printStackTrace();
 		}
-		
-		javaMailSender.send(message);
-	}
 
+		sender.send(message);
+	}
 
 }
